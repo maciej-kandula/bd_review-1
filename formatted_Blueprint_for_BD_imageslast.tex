@@ -207,15 +207,16 @@ Studies with Application to Survival Time Prediction Models}
 
 \begin{abstract} % abstract
 \parttitle{Background} %if any
+
 Recently high-throughput technologies have been massively
 used alongside clinical tests to study various types of cancer. Data
-generated in such large-scale studies are heterogenous, of different
+generated in such large-scale studies are heterogeneous, of different
 types and formats. With lack of effective integration strategies novel
-models are necessary for efficient and operative data integration where
+models are necessary for efficient and operative data integration, where
 both clinical and molecular information can be effectively combined.
-Such models combined with machine learning methods for accurate
-prediction of survival time in cancer studies can yield novel insights
-into disease development and lead to precise personal therapies.
+Such models, combined with machine learning methods for accurate
+prediction of survival time in cancer studies, can yield novel insights
+into disease development and lead to precise personalized therapies.
 
 
 
@@ -224,13 +225,13 @@ into disease development and lead to precise personal therapies.
 We developed an approach for intelligent data integration of
 two cancer datasets (breast cancer and neuroblastoma) $-$ provided in
 the CAMDA 2018 {\textquoteleft}Cancer Data Integration
-Challenge{\textquoteright}, and compare models for prediction of
+Challenge{\textquoteright}, and compared models for prediction of
 survival time. We developed a novel semantic network-based data
-integration model that utilizes NoSQL databases, where we combine
+integration model that utilizes NoSQL databases, where we combined
 clinical and expression profile data, using both raw data records and
-external knowledge sources. Using the integrated data we introduce Tumor Integrated Clinical Feature (TICF)
+external knowledge sources. Using the integrated data we introduced Tumor Integrated Clinical Feature (TICF)
 $-$ a new feature for accurate prediction of
-patient survival time. Finally, we apply and validate several machine
+patient survival time. Finally, we applied and validated several machine
 learning models for survival time prediction.
 
 
@@ -238,10 +239,10 @@ learning models for survival time prediction.
 
 We developed a model for semantic integration of clinical
 and omics data that can borrow information across multiple cancer
-studies. By  linking data with external domain knowledge sources our
+studies. By linking data with external domain knowledge sources our
 model facilitates enrichment of the studied data by discovery of
 internal relations. The proposed and validated machine learning models
-for survival time prediction yield accurate results.
+for survival time prediction yielded accurate results.
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -293,12 +294,12 @@ for survival time prediction yield accurate results.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \paragraph{Reviewers:}
-This article was reviewed by Eran Elhaik, Ph.D, Wenzhong Xiao and Carlos Loucera.
+This article was reviewed by Eran Elhaik, Wenzhong Xiao and Carlos Loucera.
 
 \clearpage
 \newpage
 \paragraph{Open peer review:}
-Reviewed by Eran Elhaik, Ph.D, Wenzhong Xiao and Carlos Loucera. 
+Reviewed by Eran Elhaik, Wenzhong Xiao and Carlos Loucera. 
 \clearpage
 \newpage
 
@@ -311,10 +312,10 @@ therapeutic strategies. The generated high-throughput data often
 correspond to measurements of different biological entities (e.g.,
 transcripts, proteins), represent various views on the same entity
 (e.g., genetic, epigenetic) and are created through different
-technologies (e.g., microarrays, RNA-sequencing). The data are
-heterogenous, of different types and formats. There is an obvious
-necessity to integrate the data to store, access, analyse and 
-mine it easily. 
+technologies (e.g., microarrays, RNA-Sequencing). The data are
+heterogeneous, of different types and formats. There is an obvious
+necessity to integrate the data, in order to store, access, analyse and 
+mine them easily. 
 
 Data integration is understood as a mean to combining data from
 different sources, creating a unified view and improving their
@@ -322,7 +323,7 @@ accessibility to a potential user~\cite{1,2,3}. Data integration and
 biomedical analyses are separate disciplines and have evolved in
 relative isolation. There is a general agreement that uniting both
 these disciplines in order to develop more sustainable methods for
-analyses is necessary~\cite{23,24}. Data integration fundamentally involves
+analysis is necessary~\cite{23,24}. Data integration fundamentally involves
 querying across different data sources. These data sources could be,
 but are not limited to, separate relational databases or
 semi-structured data sources distributed across a network. Data
@@ -336,14 +337,14 @@ expression profiling, clinical data analytics~\cite{27}, rational drug
 design~\cite{25, 26}, which attempt to use all available biological and
 clinical knowledge to make informed development decisions. Moreover,
 machine learning-based approaches for finding and highlighting the
-useful knowledge in the vast space of abundant and heterogenous data
+useful knowledge in the vast space of abundant and heterogeneous data
 are applied for improving these analytics. Metadata, in particular, is
 gaining importance, being captured explicitly or inferred with help of
 machine learning models. Some examples include the use of machine
 learning methods in the inference of data structure, data distribution,
 and common value patterns.
 
-The heterogeneity of data makes any integrative analyses highly
+The heterogeneity of data makes any integrative analysis highly
 challenging. Data generated with different technologies include
 different sets of attributes. Where data are highly heterogeneous and
 weakly related two interconnected integrative approaches are applied:
@@ -373,7 +374,7 @@ external domain knowledge sources. With this newly added information
 the missing parts of the studied data can be filled in. In this way
 relations between attributes of the different records can be learnt.
 Currently, there are many established algorithms that address
-single-track data analyses~\cite{25, 26, 30, 33}, and some recent successful
+single-track data analysis~\cite{25, 26, 30, 33}, and some recent successful
 approaches to integrative exploration~\cite{31}. These, however, usually
 only focus on one of the integration applications, either horizontal or
 vertical, underutilizing the entireness of the available information
@@ -385,7 +386,7 @@ learning-based survival time prediction.
 
 In this study data integration is applied to unite data from
 neuroblastoma (NB) and breast cancer (BC). Via our data integration
-approach whole datasets are joint, but the semantic integrity of the
+approach whole datasets are jointed, but the semantic integrity of the
 data is kept and enriched. Through combining data from multiple cancers
 in this way we create a network of data where entities, like proteins,
 clinical features and expression features, are linked with each other~\cite{9}
@@ -433,8 +434,8 @@ medical studies data, alternatively to the most frequently used
 statistical/machine learning methods. Most of the NoSQL database
 systems share common characteristics, supporting the scalability,
 availability, flexibility and ensuring fast access times for storage,
-data retrieval and analyses~\cite{21, 22}. Very often when applying cluster
-analyses methods for grouping or joining data issues occur $-$ mainly
+data retrieval and analysis~\cite{21, 22}. Very often when applying cluster
+analysis methods for grouping or joining data issues occur $-$ mainly
 with outliers, small classes, and mostly with data dynamically changing
 relatedness. Applying our NoSQL database integration model we do
 believe that all these problems can be overcome and we can extend the
@@ -518,7 +519,7 @@ time prediction modeling.
 
 Two datasets $-$ neuroblastoma (NB)~\cite{33} and breast cancer (BC)~\cite{32},
 are used in this study. Data were provided by the CAMDA 2018 challenge~\cite{35}
-. Neuroblastoma set contains RNA-Seq gene expression profiles of
+. The neuroblastoma dataset contains RNA-Seq gene expression profiles of
 498 patients as well as Agilent microarray expression and aCGH data for
 a matched subset of 145 patients each, and corresponding clinical
 information. The breast cancer set contains profiles for microarray and
@@ -646,8 +647,8 @@ relationships{\textquotedblright} are found by a scoring mechanism.
 This scoring mechanism is introduced to rank, i.e. score, the most
 relevant relations (based on semi-structures) originating from our
 datasets. Internal relationships, based on raw data, have higher score than the relations derived from linked data. We, furthermore, define them as trusted relationships when they occur more than 10 times among different patients. This is necessary for differentiating the significant links between the proteins and for reducing the noise of the relationships between the patients through the added protein information. The noise comes from external knowledge sources where potentially all proteins can be related.The scoring mechanism also ranks the relations originating from external knowledge sources. Naturally, these should have lower scores, compared to the ones derived from the real datasets. In the process of scoring we can also improve the scores of the relations stemming from the external domain knowledge sources on the basis of the frequency with which  the certain relation appears. In the next step we classify the already integrated datasets by tumor-related properties.
-We apply a numerical normalization to the raw data by making the data uniform, smaller and closer on the data axis. After that a classification mechanism is applied to split the data in a relatively equal groups by number. Classified data are further used to
-remove redundant records of the analysed patients. For classification
+We apply a numerical normalization to the raw data. Specifically, we remove the mean and scale to unit variance. After that a classification mechanism is applied to split the data in a relatively equal groups by number. Classified data are further used to
+remove redundant records of the analysed patients. We then normalize the data again by removing the mean and scaling to unit variance. After that a classification mechanism is applied to split the data into relatively equal groups. For classification
 we apply the supervised machine learning k-neighbours approach.  
 
 \subsection{Novel integrated tumor specific feature}
@@ -698,7 +699,7 @@ We normalize the TICF feature by subtracting the mean and scaling it
 according to the unit variance. Centering and scaling are done
 independently for each record by computing the relevant statistics on
 the samples. Mean and standard deviation are then stored to be used in
-later data analyses with the transform method. Patients are then
+later data analysis with the transform method. Patients are then
 stratified into groups with regard to the TICF similarity using a
 k-neighborhood approach. 
 
@@ -946,7 +947,7 @@ integration challenge was solved by using models for horizontal and for
 vertical integration. Specifically, we applied new database
 technologies: document type database for horizontal integration and
 graph database for vertical integration -- MongoDB and Neo4j
-respectively. Such software technology facilitates findinging relations
+respectively. Such software technology facilitates finding relations
 between the records in the integrated datasets. The main merit of our
 approach is that we are able, also dynamically, to add more data and
 relations. We explored these opportunities by adding new semantically
@@ -991,7 +992,7 @@ sources.
 
 We developed machine learning based models for survival time prediction
 in two types of cancer {}-- breast cancer and neuroblastoma. We
-proposed a new TICF feature for classification and analyses, tested it
+proposed a new TICF feature for classification and analysis, tested it
 in a cross-validation setup with four machine learning models, and
 showed that the best results are obtained with Support Vector
 Regression with Linear kernel, and Decision Tree Regression. 
@@ -1012,7 +1013,7 @@ NB: Neuroblastoma; BC: breast cancer; CNV: Copy Number Variance; RESTful: Repres
 URIs: Uniform Resource Identifiers;  EDKS: External Domain Knowledge Sources; GO: Gene Ontology compendium;
 NPI: Nottingham Prognostic Index;  TICF: Tumor Integrated Clinical Feature;  SVM: Support Vector Machine;
 SVR: Support Vector Regression; RBF: Radial Basis Function; DTR: Decision Tree Regression; CD: Coefficient of Determination;
-NoSQL: Not Only Structured Query Language - non relational database; CAMDA: Critical Assessment of Massive Data analyses;
+NoSQL: Not Only Structured Query Language - non relational database; CAMDA: Critical Assessment of Massive Data Analysis;
 API: Application Programming Interface; HTTP: Hypertext Transfer Protocol; JSON:  JavaScript Object Notation;
 W3C:  World Wide Web Consortium; RNA-seq: RNA sequencing;
 
@@ -1029,7 +1030,7 @@ The authors declare that they have not competing interests.
 \section*{Funding}
 The presented work has been funded by the Bulgarian NSF within the grant GloBIG: A
 Model of Integration of Cloud Framework for Hybrid Massive Parallelism and its Application
-for analyses and Automated Semantic Enhancement of Big Heterogeneous Data Collections,
+for Analysis and Automated Semantic Enhancement of Big Heterogeneous Data Collections,
 Grant Contract DN02/9 of 17.12.2016, and by the Sofia University SRF within the grant
 Models for semantic integration of biomedical data, Contract 80-10-207/26.04.2018
 
@@ -1399,7 +1400,7 @@ studied cancers and linked to a certain patient are given.
          Workflow of data integration of independent datasets, performed
 within our framework. 
     }
-    In data preparation phase we transform and store raw data with different formats in the document database which is considered as horizontal data integration. After that we generate the relations between data based on raw dataset for patients, molecular data and we store them in a graph based DB thus we developed the internal network. After that for every mutation we search related information from external knowledge sources and build the new general relations network which is considered as vertical data integration. We store these enriched relations in the graph based DB together with the internal relationships.
+    In data preparation phase we transform and store raw data with different formats in a document database which is considered as horizontal data integration. After that we generate the relations between data based on the raw dataset for patients, molecular data and we store them in a graph based database thus we developed the internal network. After that for every mutation we search related information from external knowledge sources and build the new general relations network which is considered as vertical data integration. We store these enriched relations in the graph based database together with the internal relationships.
   }
   \label{figure_3}
 \end{figure}
@@ -1519,3 +1520,4 @@ rates and error rates of the matchings of TICF feature are given.
 
 \end{backmatter}
 \end{document}
+
