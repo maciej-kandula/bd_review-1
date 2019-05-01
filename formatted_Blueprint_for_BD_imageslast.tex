@@ -53,6 +53,9 @@
 %\RequirePackage{natbib}
 %\RequirePackage[authoryear]{natbib}% uncomment this for author-year bibliography
 \RequirePackage{hyperref}
+
+\usepackage{multirow}
+\usepackage{booktabs}
 \usepackage[utf8]{inputenc} %unicode support
 %\usepackage[applemac]{inputenc} %applemac support if unicode package fails
 %\usepackage[latin1]{inputenc} %UNIX support if unicode package fails
@@ -243,7 +246,6 @@ studies. By linking data with external domain knowledge sources our
 model facilitates enrichment of the studied data by discovery of
 internal relations. The proposed and validated machine learning models
 for survival time prediction yielded accurate results.
-\end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                          %%
@@ -260,6 +262,11 @@ for survival time prediction yielded accurate results.
 \kwd{Machine learning}
 \kwd{Survival time prediction}
 \end{keyword}
+
+\parttitle{Reviewers}
+This article was reviewed by Eran Elhaik, Wenzhong Xiao and Carlos Loucera.
+
+\end{abstract}
 
 % MSC classifications codes, if any
 %\begin{keyword}[class=AMS]
@@ -293,13 +300,266 @@ for survival time prediction yielded accurate results.
 %%                                          %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\paragraph{Reviewers:}
-This article was reviewed by Eran Elhaik, Wenzhong Xiao and Carlos Loucera.
 
 \clearpage
 \newpage
 \paragraph{Open peer review:}
-Reviewed by Eran Elhaik, Wenzhong Xiao and Carlos Loucera. 
+Reviewed by Eran Elhaik, Wenzhong Xiao and Carlos Loucera.For the full reviews, please go to the Reviewers' comments section.
+
+
+\section*{Reviewers' comments:}
+\paragraph {Reviewer's report 1, Eran Elhaik, Ph.D} 
+The proposed framework is indeed novel but I found the manuscript long and difficult to read. It should be shortened and more figures should be employed to better explain it. This can be done by adding figures showing the pipeline and how the framework works and revise the legends to be more informative. Typos should be corrected. The manuscript is original and significant for works in this field.
+\newline \textbf{Author's response:}
+We agree with the suggestions and improved the text. Figures illustrating the pipeline and how the framework works are now adjusted for better clarity. Typos are corrected and the text is optimized.
+
+
+\paragraph {Reviewer's report 2, Eran Elhaik, Ph.D}
+Is there a link to the system?
+\newline \textbf{Author's response:}
+The system is developed internally and, at the moment, not for public use. However, we uploaded the latest version of the source code into a repository on GitHub, accessible after requesting permission. Our aim is to develop the system as a publicly accessible tool.
+
+\paragraph {Reviewer's report 3,  Eran Elhaik, Ph.D}
+What are the results of the framework that has been applied to the 2 cancers? You wrote: “The potential of these models is in improving the accuracy of survival time prediction by improving iteratively the training dataset over the whole integrated dataset.” Where can we see the improving of the results accuracy?
+\newline \textbf{Author's response:}
+The potential of these models is shown in Fig. 6 and 7 and in the now additionally introduced table. The more similar the data between two patients, the more accurate the prediction is. We have now added a table with aggregated numerical results with regard to accuracy.
+
+\paragraph {Reviewer's report 4, Eran Elhaik, Ph.D}
+Figure 4 is unclear.
+\newline \textbf{Author's response:}
+In Fig. 4 we present the idea of TICF and how it is organized.
+
+\paragraph {Reviewer's report 5, newline Eran Elhaik, Ph.D}
+ Figure 5 is most unhelpful. Consider adding more information from proteins, etc. to increase clarity.
+\newline \textbf{Author's response:}
+Fig. 5 shows how the Linked Data concept is applied for patient data integration. The linked data is a method of publishing structured data so that it can be interlinked and explored via semantic queries. The queries in our case can be done by using the information of the relation between a mutated base (e.g., CNVs) and a patient. 
+
+
+\paragraph {Reviewer's report 6, Eran Elhaik, Ph.D}
+The legends of figures 6 and 7 are unclear. If I understand correctly, figure 6a demonstrates the accuracy of the model – this should be emphasizes and more numerical results should be provided, but for which cancer are they? Also, these figures have subplots that are not mentioned in the legend.
+\newline \textbf{Author's response:}
+We introduced new tables (Tab. 1 and 2) showing the numerical results. We give an answer to the rest of the question in our answer to question 3.
+
+\paragraph {Reviewer's report 7, Eran Elhaik, Ph.D}
+TCIF is used before it is defined.
+\newline \textbf{Author's response:}
+Text is now adjusted.
+
+
+\paragraph {Reviewer's report 8, Eran Elhaik, Ph.D}
+Page 2, line 6: in order to store, to access, to analyse and to mine it easily. -> to store, access, analyse and mine it easily.
+\newline \textbf{Author's response:}
+Text is now adjusted
+
+
+\paragraph {Reviewer's report 9, Eran Elhaik, Ph.D}
+You constantly using analysis when it should have been analyses.
+\newline \textbf{Author's response:}
+Text is now adjusted
+
+
+\paragraph {Reviewer's report 10, Eran Elhaik, Ph.D}
+Data are Plural
+\newline \textbf{Author's response:}
+Text is now adjusted
+
+\paragraph {Reviewer's report 11, Eran Elhaik, Ph.D}
+Abstract: integration were both clinical and molecular ->integration where both clinical and molecular
+\newline \textbf{Author's response:}
+Text is now adjusted
+
+
+\paragraph {Reviewer's report 12, Eran Elhaik, Ph.D}
+P. 3, line 18. “Through combining data from multiple cancers in this way we create a network of data where entities, like proteins, clinical features and expression features, are linked with each other” explain now.
+\newline \textbf{Author's response:}
+Fig. 5 shows how the Linked Data concept is applied for patient data integration. The linked data is a method of publishing structured data so that it can be interlinked and explored via semantic queries. The queries in our case can be done by using the information of the relation between a mutated base (e.g., CNVs) and a patient.
+
+
+\paragraph {Reviewer's report 13, Eran Elhaik, Ph.D}
+P. 3, line 26-40. There is a need for a figure here, which would show the workflow and use the terms used in this manuscript, like “entity”
+\newline \textbf{Author's response:}
+Text is now adjusted.
+
+\paragraph {Reviewer's report 14, Eran Elhaik, Ph.D}
+ P. 4, line 23. “Conventional classification k-neighbours method is used to find patients that are linked most closely to the studied one.” Explain how.
+\newline \textbf{Author's response:}
+Fig. 5 shows how the Linked Data concept is applied for patient data integration. The linked data is a method of publishing structured data so that it can be interlinked and explored via semantic queries. The queries in our case can be done by using the information of the relation between a mutated base (e.g., CNVs) and a patient.
+KNN Method is used to classify patients based on TICF features.
+
+
+\paragraph {Reviewer's report 15, Eran Elhaik, Ph.D}
+In figure 1, I suggest that you add another figure (ab) that shows the integration of data for 2 patients because this is unclear
+\newline \textbf{Author's response:}
+Fig. 1 could potentially be extended. However, the integration of data between two (respectively all) patients is already shown in Fig. 5, where the concept of linked data is presented - the methodological background of our study.
+
+
+\paragraph {Reviewer's report 16, Eran Elhaik, Ph.D}
+Section 4 – I suggesting using a figure showing a case study being processed.
+\newline \textbf{Author's response:}
+We now added the below text to the Fig. 3.:
+In data preparation phase we transform and store raw data with different formats in a document database which is considered as horizontal data integration. After that we generate the relations between data based on the raw dataset for patients, molecular data and we store them in a graph based database thus we developed the internal network. After that for every mutation we search related information from external knowledge sources and build the new general relations network which is considered as vertical data integration. We store these enriched relations in the graph based database together with the internal relationships.
+
+
+\paragraph {Reviewer's report 17, Eran Elhaik, Ph.D}
+ P.4. “The first approach, called here `internal data network', requires data to be expressed in terms of internal relations.” give examples to such connections and where connections cannot be found
+\newline \textbf{Author's response:}
+Connections are based on the relations of patients to proteins, information directly available in the raw data. However, there exist no data concerning relations between proteins and these cannot be derived from the internal data network. We discover these protein relations based on the linked data, finally finding the relations between patients.
+
+
+\paragraph {Reviewer's report 18, Eran Elhaik, Ph.D}
+P. 7. Line 29. “These trusted relationships" are found by a scoring mechanism. This scoring mechanism is introduced to rank, i.e. score, the most relevant relations (based on semi-structures) originating from our datasets.” Can you expand on that?
+\newline \textbf{Author's response:}
+Internal relationships, based on raw data, have higher score than the relations derived from linked data. We, furthermore, define them as trusted relationships when they occur more than 10 times among different patients. This is necessary for differentiating the significant links between the proteins and for reducing the noise of the relationships between the patients through the added protein information. The noise comes from external knowledge sources where potentially all proteins can be related.
+
+
+\paragraph {Reviewer's report 19, Eran Elhaik, Ph.D}
+P. 7. Line 39. “In this way we normalize the data.” Unclear how.
+\newline \textbf{Author's response:}
+Specifically, we normalize the data by removing the mean and scaling to unit variance \cite{14}. After that a classification mechanism is applied to split the data into relatively equal groups.
+
+\paragraph {Reviewer's report 20, Eran Elhaik, Ph.D}
+P 10, line 58. “took some smaller datasets from the raw data” how small?
+\newline \textbf{Author's response:}
+It is 25\%. We added this information in the text.
+
+
+\paragraph {Reviewer's report 21, Eran Elhaik, Ph.D}
+Check reference 4. “Bio*Medical Informatics”? reference 12 has a lot of authors. Reference 20 what’s going on there? Check all your references.
+\newline \textbf{Author's response:}
+Adjusted in the text now.
+
+\paragraph {Reviewer's report 1, Wenzhong Xiao}
+While the overall framework of the work is described in the text and the figures and can be understood conceptually, the details of the approach applied to the CAMDA datasets of the two cancers are apparently lacking or difficult to follow at places, making it difficult to evaluate the quality of the resulting network after the integration. For examples,
+a) on page 6 line 61, “By generating such relations a network is built, different for each studied patient. This network includes expression profiles, CNV for the horizontal integration, and the mutated proteins.” How does this network look like for a patient? What are the different types of nodes and relationships on the network? (optional) Just as a suggestion, the clarity of these details can potentially be easily addressed by a figure showing a representative small region of the network of a selected patient.
+b) on page 7, line 27, “we developed a strategy to continue working only with so-called trusted relationships … by a scoring mechanism." What was the scoring mechanism used? 
+\newline \textbf{Author's response:}
+ a) We agree with the remark and we think the graphical interpretation of the reply can be seen in Fig. 5, which is the methodologic background of our study. b) Internal relationships, based on raw data, have higher score than the relations derived from linked data. W, furthermore, define them as trusted relationships when they occur more than 10 times among different patients. This is necessary for differentiating the significant links between the proteins and for reducing the noise of the relationships between the patients through the proteins. The noise comes from external knowledge sources where potentially all proteins can be related.
+ 
+ 
+
+\paragraph {Reviewer's report 2, Wenzhong Xiao}
+
+The "integrated tumor specific feature" proposed by the authors (tumor size, tumor stage, and age at the time of diagnosis) across different cancers is innovative and potentially important. Again, some of the details are apparently missing. For examples, a) on page 8, line 41, “Within each of the defined patient groups we detect relations of these patients to certain proteins. Using these proteins we find relations to other patients, who have the same mutated proteins as in the selected group.” What was the algorithm used? This is particularly relevant since it is not clear to this reviewer how the mutated proteins are identified for each patient in the two datasets, as apparently there is no DNA sequencing data in ether of the datasets
+b) similarly, on page 8, line 47, “The next step is to extend the number of related proteins of the selected group by using linked data, based on external knowledge sources. We again enrich the defined group of patients through new relations to proteins, and then to other related patients.” Again, what was the algorithm?
+c) on page 10, line 34, is there a difference in “weight” between the connection of the patients based on studied data and linked data? If yes, how the weights were defined? (optional) Just as a suggestion, could the author please consider demonstrating any improvement in performance by integrating the datasets of the two cancers comparing with only the data from one cancer?
+\newline \textbf{Author's response:}
+a) Molecular raw data consist of records for each patient - their copy number information (CNV) and expression profiles, where each value is reported per protein (as a unique Hugo Symbol). Based on that we develop relations between patients and proteins, i.e. the internal relationships creation. b) The names, i.e. Hugo Symbols, of the mutated proteins are obtained from the raw datasets directly. A particular Hugo Symbol is searched for in a specific external knowledge source, e.g., in Uniprot, considering also related Hugo Symbols. This way, through vertical integration, external network is developed by relating the proteins to patients, i.e. patient records. This is the conceptual background for our study.
+c) Internal relationships, based on raw data, have higher score than the relations derived from linked data. W, furthermore, define them as trusted relationships when they occur more than 10 times among different patients. This is necessary for differentiating the significant links between the proteins and for reducing the noise of the relationships between the patients through the proteins. The noise comes from external knowledge sources where potentially all proteins can be related.
+
+
+
+\paragraph {Reviewer's report 3, Wenzhong Xiao}
+On page 1, line 23, “With lack of effective integration strategies novel models are necessary for efficient and operative data integration were both clinical and molecular information can be effectively combined.” “were” should be “where”.
+\newline \textbf{Author's response:}
+Adjusted in the text now.
+
+
+\paragraph {Reviewer's report 4, Wenzhong Xiao}
+On page 1, in the Abstract, consider keeping the verb tenses consistent.
+\newline \textbf{Author's response:}
+Adjusted in the text now.
+
+
+\paragraph {Reviewer's report 5, Wenzhong Xiao}
+ In Figure 2, how do the authors extract mutation information from the aCGH and Illumina gene profiles? 
+\newline \textbf{Author's response:}
+For the aCGH we use properties, i.e fields (columns), “sample\_characteristics\_CH1” or “sample\_characteristics\_CH2” and other to define the relations of the tumors with expression profiles of the patients from where we can relate the genes and the mutations respectively. For Illumina gene profiles the approach is similar.
+
+
+\paragraph {Reviewer's report 6, Wenzhong Xiao}
+In Figure 3, consider including aCGH, Affymetrix SNP6.0 and patient information (which are shown in Figure 2) in this flowchart
+\newline \textbf{Author's response:}
+We now edited Fig. 3 for better clarity.
+
+
+
+\paragraph {Reviewer's report 1, Carlos Loucera}
+ The authors propose an interesting approach to data integration based on the construction of a relational network that combines heterogeneous data, like different views of the each sample, expression of distinct tumors or patterns mined from external resources. Furthermore, the authors propose a novel score (TICF) in order to predict the survival time of a patient. This score is defined by combining several categorical variables into a single ordinal characteristic. Finally, the survival prediction model is validated using a classical k-fold cross-validation strategy. My main criticism to the paper is that the authors do not provide enough information on the different methods and algorithms that make up the proposed methodology. It is very difficult to implement the paper as it is, even if the data is available (by accepting CAMDA terms). Regarding the data, there is a lack of descriptive statistics and contextual information. The text is written by a person who has worked with the CAMDA datasets in mind, which in my humble opinion is a mistake.
+\newline \textbf{Author's response:}
+We think that it is important for the research community to be able to test and even extend software presented in scientific publications. Therefore, we uploaded the latest version of the source code of our tool into a repository on GitHub, accessible after requesting permission. Our ultimate goal is to develop the system as a publicly accessible tool. Importantly, our aim for the moment is to present our approach and to discuss its potential applications. We are, moreover, actively working on extending the tool to other datasets.
+With regard to the datasets, as they had been previously thoroughly characterised in the corresponding publications (METABRIC: Curtis et al., Nature 486, and Dream Challenge, Margolin et al, Sci Transl Med 5; Neuroblastoma: Fischer lab, Köln - Stigliani et al, Neoplasia 14, Coco et al, IJC 131, Kocak et al, Cell Death Dis 4, Theissen et al, Genes Chromosomes Cancer 53), we decided to not go into details for the sake of space. We do, however, briefly present the data in the ‘Data description’ section of the ‘Material and methods’.
+
+
+\paragraph {Reviewer's report 2, Carlos Loucera}
+
+Although the methodology provides an interesting framework to combine several information sources into a single structured model, a relational network, the authors do not provide any kind of biological or clinical interpretation: neither the mined relations nor the results. I do not understand how the TICF features are used.
+\newline \textbf{Author's response:}
+We show biological relevance of our results by using the survival analysis as the example use case. 
+We describe how the TICF features are used in Fig. 4.
+
+
+\paragraph {Reviewer's report 3, Carlos Loucera}
+In page 9, line 14 the authors refer to an enriched TICF for a selected group of patients. This arises the first question, how is this group selected? Later, in line 17, the author refers to the second parameter (the survival score) in a per patient basis. As I understand it, the group enriches the TICF feature. How? What are the main differences between the combined feature and the enriched one? These questions should be addressed in the paper. The authors should clarify this essential part of the methodology since it seems a dangerous loop: group by TICF, extract knowledge and feature enrichment of TICF. 
+\newline \textbf{Author's response:}
+Corrections of the text on page 9, line 14: “(...) The TICF features are built for a selected group of patients. We extend the selected group of patients with new closer patients from internal networks and linked data. This newly built set of patients includes enriched TICF features. This set of already enriched TICF features for the selected group and respective relations are used as an input - first parameter to the machine learning models.”
+
+
+\paragraph {Reviewer's report 4, Carlos Loucera}
+From a machine learning point of view the paper lacks in several aspects. First and foremost, a score is used to reduce the network size, how this score is constructed should be well documented in the paper, which it is not the case. There are two critical unanswered questions, what kind of distribution the score has and how the decision threshold is computed.
+\newline \textbf{Author's response:}
+We thank for this very valuable remark and address the concerns below.
+Internal relationships, based directly on raw data, have higher score than relations derived from the linked data. We, furthermore, define them as trusted relationships when they occur more than 10 times among different patients. This is necessary for differentiating significant links between the proteins and for reducing the noise of the relationships between the patients through the proteins. The noise comes from external knowledge sources, where potentially all proteins can be related.
+
+\paragraph {Reviewer's report 5, Carlos Loucera}
+Although the problem at hand deals with survival prediction, the authors only provide a classical regression solution. 
+In regard to the standardization of the TICF feature, the implementation rises many questions. As outlined in the paper the parameters are learned using the whole dataset (lines 26-33) but it should be learned in a per-fold basis: learning the preprocessing parameters during the training phase, then applying the learned transformation to the validation subset.
+Furthermore, the estimator comparison is not well constructed, from the regression scores it seems that the hyperparameters for the RBF and Polynomial kernels are not optimized for the dataset.
+\newline \textbf{Author's response:}
+We start training the models while the data are integrated and the TICF features generated. This is an initial training and for each studied patient the models are additionally trained for each new patient by finding new relations.
+In general, survival time prediction is only used as an example application of the framework. For survival time prediction in both cancers the TICF feature is used for classification purposes using the KNN model.
+After the dataset is normalised and patients stratified into groups we apply several machine learning models for survival time prediction: Support  Vector Regression (SVR with RBF, Linear and Poly kernels) as well as Decision Tree Regression (DTR).
+
+
+\paragraph {Reviewer's report 6, Carlos Loucera}
+This leads to a very important question for which the authors do not provide any answer: how the hyperparameters are set. To be more confident about the validation I would expect a nested cross-validation scheme. As the TICF feature is used by combining other features and later enriched, I would expect a performance comparison between the three sets of features: the not-combined ones, the combined but unenriched ones and the combined and enriched cases. In its current form the paper feels like an extended abstract, promising but unfocused.
+\newline \textbf{Author's response:}
+This is a very valuable suggestion. We here want to first show and discuss the potential of vertical and horizontal data integration on cancer data use cases. Statistical testing of the features is not the major scope of this first publication.
+
+
+\paragraph {Reviewer's report 7, Carlos Loucera}
+The validation rises many questions, why do the authors only use a subset of the data?. The method is not properly explained to the point that it could be very hard to implement it,not to mention the inability to reproduce the results.  Due to these facts I do not endorse the publication of the paper in its current form.
+\newline \textbf{Author's response:}
+In our opinion, the validation models are applicable and comprehensive. For the sake of reproducibility, we now uploaded the latest version of the source code into a repository on GitHub, accessible after requesting permission. We also reproduce the results in an extended study (see: https://www.mdpi.com/2078-2489/10/3/93).
+
+
+
+\paragraph {Reviewer's report 8, Carlos Loucera}
+- Since scikit-learn has been used, in order to deal with the survival analysis problem I highly recommend either the scikit-survival or the lifelines python package. 
+- I recommend the authors to find the best hyperparameters and perform the validation by means of a nested cross-validation scheme. The scikit-learn package has a well documented example. 
+- Maybe the authors are using the default hyperparameter values provided by the scikit-learn API? If so, I recommend to implement a hyperparameter search strategy (even a simple random search could yield better results for the RBF and Polynomial kernels) 
+- I recommend the authors to extract some kind of interpretation of the constructed network with some sort of unsupervised learning algorithm working on the graph. 
+- I highly encourage the authors to better describe the methodology, be more careful about the validation schema and use the whole dataset when dealing with the validation. 
+- I would include some stratification of the validation metrics, such as stratifying the results by tumor type and subtype (if available).
+\newline \textbf{Author's response:}
+ We thank the reviewer for the valuable recommendations. We did address some of them already in our answers to previous questions. Our aim is to develop a tool based on the methodologies we used in the study, and the tool will consider your recommendations. 
+
+
+
+
+\paragraph {Reviewer's report 9, Carlos Loucera}
+Poly kernel sounds too informal, use polynomial kernel instead
+\newline \textbf{Author's response:}
+Adjusted in the text now
+
+
+\paragraph {Reviewer's report 10, Carlos Loucera}
+It is often advised to perform a simple random split (with a fixed set of hyperparameters) of the data and analyze the results on the test set (in addition to other validation schemes, in order to showcase a typical use case).
+\newline \textbf{Author's response:}
+ We are grateful to the reviewer for his suggestion and we will consider it in the extension of our study.
+
+
+\paragraph {Reviewer's report 11, Carlos Loucera}
+When talking about the first and second parameters (lines 14-16, page 9), you should use more standard names, such as features (input) and response (output).
+\newline \textbf{Author's response:}
+We agree with the suggestion
+
+
+\paragraph {Reviewer's report 12, Carlos Loucera}
+Once all the previous issues have been resolved, I would recommend to revise the English, although it should be mentioned that the text is concisely written, in an easy to follow way
+\newline \textbf{Author's response:}
+We now revised the text.
+
+
 \clearpage
 \newpage
 
@@ -882,42 +1142,6 @@ SVR-RBF, with regard to accuracy. This shows that SVR-Linear and DTR
 are more suitable, among the four compared models, for accurate
 survival time prediction.
 
-
-\begin{table}[H]
-\caption{Aggregated results of cross-validation.} \label{tab1}
-\centering
-%% \tablesize{} %% You can specify the fontsize here, e.g.,  \tablesize{\footnotesize}. If commented out \small will be used.
-\begin{tabular}{ccccccccc}
-\toprule
-\multirow{\textbf{ML Model}} &  \multicolumn{2}{c}{\multirow{\textbf{Train R2}}} & \multicolumn{2}{c}{\multirow{\textbf{Explained Variance}}} & \multicolumn{2}{c}{\textbf{Negative Mean}} & \multicolumn{2}{c}{\textbf{Negative Median}}\\ & & & & & \multicolumn{2}{c}{\textbf{Absolute Error}} & \multicolumn{2}{c}{\textbf{Absolute Error}} \\
-\midrule
-{} & \textbf{Mean} & \textbf{StD} & \textbf{Mean} & \textbf{StD} & \textbf{Mean} & \textbf{StD} & \textbf{Mean} & \textbf{StD}\\
-SVR-RBF & 0.318 & 0.038 & 0.341 & 0.032 & $-$45.742 & 5.224 & $-$34.455 & 5.594\\
-SVR-LINEAR & 0.983 & 0.007 & 0.986 & 0.006 & $-$7.288 & 1.935 & $-$6.109 & 1.509\\
-DTR & 0.996 & 0.000 & 0.996 & 0.427 & $-$5.624 & 0.427 & $-$4.636 & 0.467\\
-SVR-POLY & 0.884 & 0.007 & 0.887 & 0.009 & $-$20.354 & 3.290 & $-$15.581 & 5.382\\
-\bottomrule
-\end{tabular}
-\end{table}
-
-
-\begin{table}[H]
-\caption{Execution time of the applied ML models per iteration. in terms of time of training, predict and total time which are sum of the train plus predict time.}  \label{tab2}
-\centering
-%% \tablesize{} %% You can specify the fontsize here, e.g.,  \tablesize{\footnotesize}. If commented out \small will be used.
-\begin{tabular}{cccc}
-\toprule
-\textbf{ML Model} & \textbf{Train (s)} & \textbf{Predict (s)} & \textbf{Total (s)} \\
-\midrule
-SVR-RBF & 0.070589066 & 0.001976013 & 0.072565079 \\
-SVR-LINEAR & 0.050335884 & 0.000173092 & 0.050508976 \\
-DTR & 0.028145075 & 0.000221968 & 0.028367043 \\
-SVR-POLY & 0.479592085 & 0.001157999 & 0.480750084 \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-
 \section{Discussion}
 
 In this work we introduce a novel unified and universal approach for
@@ -963,8 +1187,7 @@ the studied one. Inclusion of related patients with different clinical
 and expression parameters, as we show, is essential for improving the
 accuracy of survival prediction models.
 
-For survival time prediction we apply supervised regression models [19,
-20]. Models used in this study utilize the TICF feature to improve the
+For survival time prediction we apply supervised regression models \cite{19,20}. Models used in this study utilize the TICF feature to improve the
 accuracy of patient survival time prediction. Moreover, application of
 these specific machine learning algorithms ensures a reliable
 validation of our semantic data integration approach. Cross-validation
@@ -1023,11 +1246,11 @@ The Python scripts for analyses are available upon request.
 \section*{Competing interests}
 The authors declare that they have not competing interests.
 \section*{Funding}
-The presented work has been funded by the Bulgarian NSF within the grant GloBIG: A
+The presented work has been funded by the Bulgarian NSF within the grant ``GloBIG: A
 Model of Integration of Cloud Framework for Hybrid Massive Parallelism and its Application
-for Analysis and Automated Semantic Enhancement of Big Heterogeneous Data Collections,
+for Analysis and Automated Semantic Enhancement of Big Heterogeneous Data Collections'',
 Grant Contract DN02/9 of 17.12.2016, and by the Sofia University SRF within the grant
-Models for semantic integration of biomedical data, Contract 80-10-207/26.04.2018
+``Models for semantic integration of biomedical data'', Contract 80-10-207/26.04.2018
 
 \section*{Competing interests}
   The authors declare that they have no competing interests.
@@ -1046,349 +1269,6 @@ development of the network-based data integration model presented in Section
 Science, Informatics and Technologies in the e-Society (UNITe) funded by
 Operational Program Science and Education for Smart Growth co-funded by
 European Regional Development Fund.
-
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 1
-\newline Eran Elhaik, Ph.D
-\newline \textbf{Reviewer comments:}
-The proposed framework is indeed novel but I found the manuscript long and difficult to read. It should be shortened and more figures should be employed to better explain it. This can be done by adding figures showing the pipeline and how the framework works and revise the legends to be more informative. Typos should be corrected. The manuscript is original and significant for works in this field.
-\newline \textbf{Author's response:}
-We agree with the suggestions and improved the text. Figures illustrating the pipeline and how the framework works are now adjusted for better clarity. Typos are corrected and the text is optimized.
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 2
-\newline Eran Elhaik, Ph.D
-\newline \textbf{Reviewer comments:}
-Is there a link to the system?
-\newline \textbf{Author's response:}
-The system is developed internally and, at the moment, not for public use. However, we uploaded the latest version of the source code into a repository on GitHub, accessible after requesting permission. Our aim is to develop the system as a publicly accessible tool.
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 3
-\newline Eran Elhaik, Ph.D
-\newline \textbf{Reviewer comments:}
-What are the results of the framework that has been applied to the 2 cancers? You wrote: “The potential of these models is in improving the accuracy of survival time prediction by improving iteratively the training dataset over the whole integrated dataset.” Where can we see the improving of the results accuracy?
-\newline \textbf{Author's response:}
-The potential of these models is shown in Fig. 6 and 7 and in the now additionally introduced table. The more similar the data between two patients, the more accurate the prediction is. We have now added a table with aggregated numerical results with regard to accuracy.
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 4
-\newline Eran Elhaik, Ph.D
-\newline \textbf{Reviewer comments:}
-Figure 4 is unclear.
-\newline \textbf{Author's response:}
-In Fig. 4 we present the idea of TICF and how it is organized.
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 5
-\newline Eran Elhaik, Ph.D
-\newline \textbf{Reviewer comments:}
- Figure 5 is most unhelpful. Consider adding more information from proteins, etc. to increase clarity.
-\newline \textbf{Author's response:}
-Fig. 5 shows how the Linked Data concept is applied for patient data integration. The linked data is a method of publishing structured data so that it can be interlinked and explored via semantic queries. The queries in our case can be done by using the information of the relation between a mutated base (e.g., CNVs) and a patient. 
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 6
-\newline Eran Elhaik, Ph.D
-\newline \textbf{Reviewer comments:}
-The legends of figures 6 and 7 are unclear. If I understand correctly, figure 6a demonstrates the accuracy of the model – this should be emphasizes and more numerical results should be provided, but for which cancer are they? Also, these figures have subplots that are not mentioned in the legend.
-\newline \textbf{Author's response:}
-We introduced new tables (Tab. 1 and 2) showing the numerical results. We give an answer to the rest of the question in our answer to question 3.
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 7
-\newline Eran Elhaik, Ph.D
-\newline \textbf{Reviewer comments:}
-TCIF is used before it is defined.
-\newline \textbf{Author's response:}
-Text is now adjusted.
-
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 8
-\newline Eran Elhaik, Ph.D
-\newline \textbf{Reviewer comments:}
-Page 2, line 6: in order to store, to access, to analyse and to mine it easily. -> to store, access, analyse and mine it easily.
-\newline \textbf{Author's response:}
-Text is now adjusted
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 9
-\newline Eran Elhaik, Ph.D
-\newline \textbf{Reviewer comments:}
-You constantly using analysis when it should have been analyses.
-\newline \textbf{Author's response:}
-Text is now adjusted
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 10
-\newline Eran Elhaik, Ph.D
-\newline \textbf{Reviewer comments:}
-Data are Plural
-\newline \textbf{Author's response:}
-Text is now adjusted
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 11
-\newline Eran Elhaik, Ph.D
-\newline \textbf{Reviewer comments:}
-Abstract: integration were both clinical and molecular ->integration where both clinical and molecular
-\newline \textbf{Author's response:}
-Text is now adjusted
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 12
-\newline Eran Elhaik, Ph.D
-\newline \textbf{Reviewer comments:}
-P. 3, line 18. “Through combining data from multiple cancers in this way we create a network of data where entities, like proteins, clinical features and expression features, are linked with each other” explain now.
-\newline \textbf{Author's response:}
-Fig. 5 shows how the Linked Data concept is applied for patient data integration. The linked data is a method of publishing structured data so that it can be interlinked and explored via semantic queries. The queries in our case can be done by using the information of the relation between a mutated base (e.g., CNVs) and a patient.
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 13
-\newline Eran Elhaik, Ph.D
-\newline \textbf{Reviewer comments:}
-P. 3, line 26-40. There is a need for a figure here, which would show the workflow and use the terms used in this manuscript, like “entity”
-\newline \textbf{Author's response:}
-Text is now adjusted.
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 14
-\newline Eran Elhaik, Ph.D
-\newline \textbf{Reviewer comments:}
- P. 4, line 23. “Conventional classification k-neighbours method is used to find patients that are linked most closely to the studied one.” Explain how.
-\newline \textbf{Author's response:}
-Fig. 5 shows how the Linked Data concept is applied for patient data integration. The linked data is a method of publishing structured data so that it can be interlinked and explored via semantic queries. The queries in our case can be done by using the information of the relation between a mutated base (e.g., CNVs) and a patient.
-KNN Method is used to classify patients based on TICF features.
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 15
-\newline Eran Elhaik, Ph.D
-\newline \textbf{Reviewer comments:}
-In figure 1, I suggest that you add another figure (ab) that shows the integration of data for 2 patients because this is unclear
-\newline \textbf{Author's response:}
-Fig. 1 could potentially be extended. However, the integration of data between two (respectively all) patients is already shown in Fig. 5, where the concept of linked data is presented - the methodological background of our study.
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 16
-\newline Eran Elhaik, Ph.D
-\newline \textbf{Reviewer comments:}
-Section #4 – I suggesting using a figure showing a case study being processed.
-\newline \textbf{Author's response:}
-We now added the below text to the Fig. 3.:
-In data preparation phase we transform and store raw data with different formats in a document database which is considered as horizontal data integration. After that we generate the relations between data based on the raw dataset for patients, molecular data and we store them in a graph based database thus we developed the internal network. After that for every mutation we search related information from external knowledge sources and build the new general relations network which is considered as vertical data integration. We store these enriched relations in the graph based database together with the internal relationships.
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 17
-\newline Eran Elhaik, Ph.D
-\newline \textbf{Reviewer comments:}
- P.4. “The first approach, called here `internal data network', requires data to be expressed in terms of internal relations.” give examples to such connections and where connections cannot be found
-\newline \textbf{Author's response:}
-Connections are based on the relations of patients to proteins, information directly available in the raw data. However, there exist no data concerning relations between proteins and these cannot be derived from the internal data network. We discover these protein relations based on the linked data, finally finding the relations between patients.
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 18
-\newline Eran Elhaik, Ph.D
-\newline \textbf{Reviewer comments:}
-P. 7. Line 29. “These trusted relationships" are found by a scoring mechanism. This scoring mechanism is introduced to rank, i.e. score, the most relevant relations (based on semi-structures) originating from our datasets.” Can you expand on that?
-\newline \textbf{Author's response:}
-Internal relationships, based on raw data, have higher score than the relations derived from linked data. We, furthermore, define them as trusted relationships when they occur more than 10 times among different patients. This is necessary for differentiating the significant links between the proteins and for reducing the noise of the relationships between the patients through the added protein information. The noise comes from external knowledge sources where potentially all proteins can be related.
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 19
-\newline Eran Elhaik, Ph.D
-\newline \textbf{Reviewer comments:}
-P. 7. Line 39. “In this way we normalize the data.” Unclear how.
-\newline \textbf{Author's response:}
-Specifically, we normalize the data by removing the mean and scaling to unit variance[20] (Meeker & Escobar, 1998). After that a classification mechanism is applied to split the data into relatively equal groups.
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 20
-\newline Eran Elhaik, Ph.D
-\newline \textbf{Reviewer comments:}
-P 10, line 58. “took some smaller datasets from the raw data” how small?
-\newline \textbf{Author's response:}
-It is 25\%. We added this information in the text.
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 21
-\newline Eran Elhaik, Ph.D
-\newline \textbf{Reviewer comments:}
-Check reference #4. “Bio*Medical Informatics”? reference #12 has a lot of authors. Reference #20 what’s going on there? Check all your references.
-\newline \textbf{Author's response:}
-Adjusted in the text now.
-
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 1
-\newline Wenzhong Xiao
-\newline \textbf{Reviewer comments:}
-While the overall framework of the work is described in the text and the figures and can be understood conceptually, the details of the approach applied to the CAMDA datasets of the two cancers are apparently lacking or difficult to follow at places, making it difficult to evaluate the quality of the resulting network after the integration. For examples,
-a) on page 6 line 61, “By generating such relations a network is built, different for each studied patient. This network includes expression profiles, CNV for the horizontal integration, and the mutated proteins.” How does this network look like for a patient? What are the different types of nodes and relationships on the network? (optional) Just as a suggestion, the clarity of these details can potentially be easily addressed by a figure showing a representative small region of the network of a selected patient.
-b) on page 7, line 27, “we developed a strategy to continue working only with so-called trusted relationships … by a scoring mechanism." What was the scoring mechanism used? 
-\newline \textbf{Author's response:}
- a) We agree with the remark and we think the graphical interpretation of the reply can be seen in Fig. 5, which is the methodologic background of our study. b) Internal relationships, based on raw data, have higher score than the relations derived from linked data. W, furthermore, define them as trusted relationships when they occur more than 10 times among different patients. This is necessary for differentiating the significant links between the proteins and for reducing the noise of the relationships between the patients through the proteins. The noise comes from external knowledge sources where potentially all proteins can be related.
- 
- 
-\section*{Reviewers' comments}
-\newline Reviewer's report 2
-\newline Wenzhong Xiao
-\newline \textbf{Reviewer comments:}
-The "integrated tumor specific feature" proposed by the authors (tumor size, tumor stage, and age at the time of diagnosis) across different cancers is innovative and potentially important. Again, some of the details are apparently missing. For examples, a) on page 8, line 41, “Within each of the defined patient groups we detect relations of these patients to certain proteins. Using these proteins we find relations to other patients, who have the same mutated proteins as in the selected group.” What was the algorithm used? This is particularly relevant since it is not clear to this reviewer how the mutated proteins are identified for each patient in the two datasets, as apparently there is no DNA sequencing data in ether of the datasets
-b) similarly, on page 8, line 47, “The next step is to extend the number of related proteins of the selected group by using linked data, based on external knowledge sources. We again enrich the defined group of patients through new relations to proteins, and then to other related patients.” Again, what was the algorithm?
-c) on page 10, line 34, is there a difference in “weight” between the connection of the patients based on studied data and linked data? If yes, how the weights were defined? (optional) Just as a suggestion, could the author please consider demonstrating any improvement in performance by integrating the datasets of the two cancers comparing with only the data from one cancer?
-\newline \textbf{Author's response:}
-a) Molecular raw data consist of records for each patient - their copy number information (CNV) and expression profiles, where each value is reported per protein (as a unique Hugo Symbol). Based on that we develop relations between patients and proteins, i.e. the internal relationships creation. b) The names, i.e. Hugo Symbols, of the mutated proteins are obtained from the raw datasets directly. A particular Hugo Symbol is searched for in a specific external knowledge source, e.g., in Uniprot, considering also related Hugo Symbols. This way, through vertical integration, external network is developed by relating the proteins to patients, i.e. patient records. This is the conceptual background for our study.
-c) Internal relationships, based on raw data, have higher score than the relations derived from linked data. W, furthermore, define them as trusted relationships when they occur more than 10 times among different patients. This is necessary for differentiating the significant links between the proteins and for reducing the noise of the relationships between the patients through the proteins. The noise comes from external knowledge sources where potentially all proteins can be related.
-
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 3
-\newline Wenzhong Xiao
-\newline \textbf{Reviewer comments:}
-On page 1, line 23, “With lack of effective integration strategies novel models are necessary for efficient and operative data integration were both clinical and molecular information can be effectively combined.” “were” should be “where”.
-\newline \textbf{Author's response:}
-Adjusted in the text now.
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 4
-\newline Wenzhong Xiao
-\newline \textbf{Reviewer comments:}
-On page 1, in the Abstract, consider keeping the verb tenses consistent.
-\newline \textbf{Author's response:}
-Adjusted in the text now.
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 5
-\newline Wenzhong Xiao
-\newline \textbf{Reviewer comments:}
- In Figure 2, how do the authors extract mutation information from the aCGH and Illumina gene profiles? 
-\newline \textbf{Author's response:}
-For the aCGH we use properties, i.e fields (columns), “sample_characteristics_CH1” or “sample_characteristics_CH2” and other to define the relations of the tumors with expression profiles of the patients from where we can relate the genes and the mutations respectively. For Illumina gene profiles the approach is similar.
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 6
-\newline Wenzhong Xiao
-\newline \textbf{Reviewer comments:}
-In Figure 3, consider including aCGH, Affymetrix SNP6.0 and patient information (which are shown in Figure 2) in this flowchart
-\newline \textbf{Author's response:}
-We now edited Fig. 3 for better clarity.
-
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 1
-\newline Carlos Loucera
-\newline \textbf{Reviewer comments:}
- The authors propose an interesting approach to data integration based on the construction of a relational network that combines heterogeneous data, like different views of the each sample, expression of distinct tumors or patterns mined from external resources. Furthermore, the authors propose a novel score (TICF) in order to predict the survival time of a patient. This score is defined by combining several categorical variables into a single ordinal characteristic. Finally, the survival prediction model is validated using a classical k-fold cross-validation strategy. My main criticism to the paper is that the authors do not provide enough information on the different methods and algorithms that make up the proposed methodology. It is very difficult to implement the paper as it is, even if the data is available (by accepting CAMDA terms). Regarding the data, there is a lack of descriptive statistics and contextual information. The text is written by a person who has worked with the CAMDA datasets in mind, which in my humble opinion is a mistake.
-\newline \textbf{Author's response:}
-We think that it is important for the research community to be able to test and even extend software presented in scientific publications. Therefore, we uploaded the latest version of the source code of our tool into a repository on GitHub, accessible after requesting permission. Our ultimate goal is to develop the system as a publicly accessible tool. Importantly, our aim for the moment is to present our approach and to discuss its potential applications. We are, moreover, actively working on extending the tool to other datasets.
-With regard to the datasets, as they had been previously thoroughly characterised in the corresponding publications (METABRIC: Curtis et al., Nature 486, and Dream Challenge, Margolin et al, Sci Transl Med 5; Neuroblastoma: Fischer lab, Köln - Stigliani et al, Neoplasia 14, Coco et al, IJC 131, Kocak et al, Cell Death Dis 4, Theissen et al, Genes Chromosomes Cancer 53), we decided to not go into details for the sake of space. We do, however, briefly present the data in the ‘Data description’ section of the ‘Material and methods’.
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 2
-\newline Carlos Loucera
-\newline \textbf{Reviewer comments:}
-Although the methodology provides an interesting framework to combine several information sources into a single structured model, a relational network, the authors do not provide any kind of biological or clinical interpretation: neither the mined relations nor the results. I do not understand how the TICF features are used.
-\newline \textbf{Author's response:}
-We show biological relevance of our results by using the survival analysis as the example use case. 
-We describe how the TICF features are used in Fig. 4.
-
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 3
-\newline Carlos Loucera
-\newline \textbf{Reviewer comments:}
-In page 9, line 14 the authors refer to an enriched TICF for a selected group of patients. This arises the first question, how is this group selected? Later, in line 17, the author refers to the second parameter (the survival score) in a per patient basis. As I understand it, the group enriches the TICF feature. How? What are the main differences between the combined feature and the enriched one? These questions should be addressed in the paper. The authors should clarify this essential part of the methodology since it seems a dangerous loop: group by TICF, extract knowledge and feature enrichment of TICF. 
-\newline \textbf{Author's response:}
-Corrections of the text on page 9, line 14: “(...) The TICF features are built for a selected group of patients. We extend the selected group of patients with new closer patients from internal networks and linked data. This newly built set of patients includes enriched TICF features. This set of already enriched TICF features for the selected group and respective relations are used as an input - first parameter to the machine learning models.”
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 4
-\newline Carlos Loucera
-\newline \textbf{Reviewer comments:}
-From a machine learning point of view the paper lacks in several aspects. First and foremost, a score is used to reduce the network size, how this score is constructed should be well documented in the paper, which it is not the case. There are two critical unanswered questions, what kind of distribution the score has and how the decision threshold is computed.
-\newline \textbf{Author's response:}
-We thank for this very valuable remark and address the concerns below.
-Internal relationships, based directly on raw data, have higher score than relations derived from the linked data. We, furthermore, define them as trusted relationships when they occur more than 10 times among different patients. This is necessary for differentiating significant links between the proteins and for reducing the noise of the relationships between the patients through the proteins. The noise comes from external knowledge sources, where potentially all proteins can be related.
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 5
-\newline Carlos Loucera
-\newline \textbf{Reviewer comments:}
-Although the problem at hand deals with survival prediction, the authors only provide a classical regression solution. 
-In regard to the standardization of the TICF feature, the implementation rises many questions. As outlined in the paper the parameters are learned using the whole dataset (lines 26-33) but it should be learned in a per-fold basis: learning the preprocessing parameters during the training phase, then applying the learned transformation to the validation subset.
-Furthermore, the estimator comparison is not well constructed, from the regression scores it seems that the hyperparameters for the RBF and Polynomial kernels are not optimized for the dataset.
-\newline \textbf{Author's response:}
-We start training the models while the data are integrated and the TICF features generated. This is an initial training and for each studied patient the models are additionally trained for each new patient by finding new relations.
-In general, survival time prediction is only used as an example application of the framework. For survival time prediction in both cancers the TICF feature is used for classification purposes using the KNN model.
-After the dataset is normalised and patients stratified into groups we apply several machine learning models for survival time prediction: Support  Vector Regression (SVR with RBF, Linear and Poly kernels) as well as Decision Tree Regression (DTR).
-
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 6
-\newline Carlos Loucera
-\newline \textbf{Reviewer comments:}
-This leads to a very important question for which the authors do not provide any answer: how the hyperparameters are set. To be more confident about the validation I would expect a nested cross-validation scheme. As the TICF feature is used by combining other features and later enriched, I would expect a performance comparison between the three sets of features: the not-combined ones, the combined but unenriched ones and the combined and enriched cases. In its current form the paper feels like an extended abstract, promising but unfocused.
-\newline \textbf{Author's response:}
-This is a very valuable suggestion. We here want to first show and discuss the potential of vertical and horizontal data integration on cancer data use cases. Statistical testing of the features is not the major scope of this first publication.
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 7
-\newline Carlos Loucera
-\newline \textbf{Reviewer comments:}
-The validation rises many questions, why do the authors only use a subset of the data?. The method is not properly explained to the point that it could be very hard to implement it,not to mention the inability to reproduce the results.  Due to these facts I do not endorse the publication of the paper in its current form.
-\newline \textbf{Author's response:}
-In our opinion, the validation models are applicable and comprehensive. For the sake of reproducibility, we now uploaded the latest version of the source code into a repository on GitHub, accessible after requesting permission. We also reproduce the results in an extended study (see: https://www.mdpi.com/2078-2489/10/3/93).
-
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 8
-\newline Carlos Loucera
-\newline \textbf{Reviewer comments:}
-- Since scikit-learn has been used, in order to deal with the survival analysis problem I highly recommend either the scikit-survival or the lifelines python package. 
-- I recommend the authors to find the best hyperparameters and perform the validation by means of a nested cross-validation scheme. The scikit-learn package has a well documented example. 
-- Maybe the authors are using the default hyperparameter values provided by the scikit-learn API? If so, I recommend to implement a hyperparameter search strategy (even a simple random search could yield better results for the RBF and Polynomial kernels) 
-- I recommend the authors to extract some kind of interpretation of the constructed network with some sort of unsupervised learning algorithm working on the graph. 
-- I highly encourage the authors to better describe the methodology, be more careful about the validation schema and use the whole dataset when dealing with the validation. 
-- I would include some stratification of the validation metrics, such as stratifying the results by tumor type and subtype (if available).
-\newline \textbf{Author's response:}
- We thank the reviewer for the valuable recommendations. We did address some of them already in our answers to previous questions. Our aim is to develop a tool based on the methodologies we used in the study, and the tool will consider your recommendations. 
-
-
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 9
-\newline Carlos Loucera
-\newline \textbf{Reviewer comments:}
-Poly kernel sounds too informal, use polynomial kernel instead
-\newline \textbf{Author's response:}
-Adjusted in the text now
-
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 10
-\newline Carlos Loucera
-\newline \textbf{Reviewer comments:}
-It is often advised to perform a simple random split (with a fixed set of hyperparameters) of the data and analyze the results on the test set (in addition to other validation schemes, in order to showcase a typical use case).
-\newline \textbf{Author's response:}
- We are grateful to the reviewer for his suggestion and we will consider it in the extension of our study.
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 11
-\newline Carlos Loucera
-\newline \textbf{Reviewer comments:}
-When talking about the first and second parameters (lines 14-16, page 9), you should use more standard names, such as features (input) and response (output).
-\newline \textbf{Author's response:}
-We agree with the suggestion
-
-\section*{Reviewers' comments}
-\newline Reviewer's report 12
-\newline Carlos Loucera
-\newline \textbf{Reviewer comments:}
-Once all the previous issues have been resolved, I would recommend to revise the English, although it should be mentioned that the text is concisely written, in an easy to follow way
-\newline \textbf{Author's response:}
-We now revised the text.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1566,6 +1446,37 @@ rates and error rates of the matchings of TICF feature are given.
 %% Tables                        %%
 %%                               %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[h!]
+\caption{Aggregated results of cross-validation.}
+   \begin{tabular}{ccccccccc}
+{\textbf{ML Model}} &  \multicolumn{2}{c}{{\textbf{Train R2}}} & \multicolumn{2}{c}{{\textbf{Explained Variance}}} & \multicolumn{2}{c}{\textbf{Negative Mean}} & \multicolumn{2}{c}{\textbf{Negative Median}}\\ & & & & & \multicolumn{2}{c}{\textbf{Absolute Error}} & \multicolumn{2}{c}{\textbf{Absolute Error}} \\
+\midrule
+{} & \textbf{Mean} & \textbf{StD} & \textbf{Mean} & \textbf{StD} & \textbf{Mean} & \textbf{StD} & \textbf{Mean} & \textbf{StD}\\
+SVR-RBF & 0.318 & 0.038 & 0.341 & 0.032 & $-$45.742 & 5.224 & $-$34.455 & 5.594\\
+SVR-LINEAR & 0.983 & 0.007 & 0.986 & 0.006 & $-$7.288 & 1.935 & $-$6.109 & 1.509\\
+DTR & 0.996 & 0.000 & 0.996 & 0.427 & $-$5.624 & 0.427 & $-$4.636 & 0.467\\
+SVR-POLY & 0.884 & 0.007 & 0.887 & 0.009 & $-$20.354 & 3.290 & $-$15.581 & 5.382\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\caption{Execution time of the applied ML models per iteration. in terms of time of training, predict and total time which are sum of the train plus predict time.}  \label{tab2}
+\centering
+%% \tablesize{} %% You can specify the fontsize here, e.g.,  \tablesize{\footnotesize}. If commented out \small will be used.
+\begin{tabular}{cccc}
+\toprule
+\textbf{ML Model} & \textbf{Train (s)} & \textbf{Predict (s)} & \textbf{Total (s)} \\
+\midrule
+SVR-RBF & 0.070589066 & 0.001976013 & 0.072565079 \\
+SVR-LINEAR & 0.050335884 & 0.000173092 & 0.050508976 \\
+DTR & 0.028145075 & 0.000221968 & 0.028367043 \\
+SVR-POLY & 0.479592085 & 0.001157999 & 0.480750084 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
 
 %% Use of \listoftables is discouraged.
 %%
